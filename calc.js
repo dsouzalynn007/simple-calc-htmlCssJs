@@ -1,7 +1,6 @@
 let allButtons = document.querySelectorAll('input[type="button"]')
 let allBtnsToArr = [...allButtons]
 let calcInput = document.querySelector('.calcInput')
-let Zero = calcInput.defaultValue
 
 calcInput.readOnly=true
 
@@ -10,9 +9,9 @@ allBtnsToArr.map(btns=>{
         let btnVal=clk.target.defaultValue
 
         if(btnVal==='C'){
-            calcInput.value=Zero
+            calcInput.value=''
         }else if(btnVal!=='='){
-            if(calcInput.value===Zero) calcInput.value=btnVal
+            if(calcInput.value===undefined) calcInput.value=btnVal
             else calcInput.value+=btnVal
         }else{
             try{ 
@@ -20,7 +19,7 @@ allBtnsToArr.map(btns=>{
             }catch(err){
                 if(err){
                 calcInput.value=err.name
-                setTimeout(()=>calcInput.value=Zero, '3000')
+                setTimeout(()=>calcInput.value='', '3000')
                 }
             }
         }

@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
-    margin: auto;
+    margin: 0;
+    padding: 0;
 }
 html, body{
     width: 100%;
@@ -25,6 +26,7 @@ html, body{
 #mainSection aside{
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
 }
 #mainSection .solarPanel{
     height: 25px;
@@ -34,7 +36,13 @@ html, body{
     black, rgb(13, 13, 65), black);
     border: 3px groove gray;
 }
-#mainSection input[type='text']{
+#mainSection .calcName{
+    width: 30%;
+    font-family: cursive;
+    font-weight: bolder;
+    color: rgba(20, 29, 100, 0.58);
+}
+#mainSection textarea[type='text']{
     width: 70%;
     height: 50px;
     margin: 5px;
@@ -42,7 +50,10 @@ html, body{
     font-size: 20px;
     font-family: "digital-7";
     outline: none;
-    /* letter-spacing: 2px; */
+    resize: none;
+    padding: 5px;
+    letter-spacing: 10px;
+    cursor: not-allowed;
 }
 #mainSection input[value="C"]{
     width: 20% !important;
@@ -58,3 +69,9 @@ html, body{
     border-radius: 5px;
     cursor: pointer;
 }
+/* ! Scrollbar css */
+textarea::-webkit-scrollbar { width: 5px; cursor: pointer;}
+textarea::-webkit-scrollbar-track { border: 1px solid gray; }
+textarea::-webkit-scrollbar-thumb { background: darkgray; cursor: pointer; }
+textarea::-webkit-scrollbar-thumb:hover { background: black; cursor: pointer; }
+  

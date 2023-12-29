@@ -8,8 +8,6 @@ calcInput.readOnly=true
 allBtnsToArr.map(btns=>{
     btns.addEventListener('click',(clk)=>{
         let btnVal=clk.target.defaultValue
-        console.log(calcInput.value)
-        calcInput.value === '1' ? calcInput.style.letterSpacing='5px' : ''
 
         if(btnVal==='C'){
             calcInput.value=Zero

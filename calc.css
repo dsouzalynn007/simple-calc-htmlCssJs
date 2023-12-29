@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: auto;
+}
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+@font-face {
+    font-family: "digital-7";
+    src: url("Digital7Mono-Yz9J4.ttf");
+}
+#mainSection{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainSection article{
+    background: silver;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px groove gray;
+}
+#mainSection aside{
+    width: 100%;
+    display: flex;
+}
+#mainSection .solarPanel{
+    height: 25px;
+    width: 70%;
+    background: rgb(33, 33, 45);
+    background: linear-gradient(to left ,black, rgb(13, 13, 65), black, rgb(13, 13, 65),
+    black, rgb(13, 13, 65), black);
+    border: 3px groove gray;
+}
+#mainSection input[type='text']{
+    width: 70%;
+    height: 50px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "digital-7";
+    outline: none;
+    /* letter-spacing: 2px; */
+}
+#mainSection input[value="C"]{
+    width: 20% !important;
+}
+#mainSection input[type='button']{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background: black;
+    color: white;
+    font-weight: bolder;
+    border: 3px groove #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
